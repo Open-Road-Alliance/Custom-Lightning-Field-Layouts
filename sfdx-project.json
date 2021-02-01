@@ -1,0 +1,21 @@
+{
+    "packageDirectories": [
+        {
+            "path": "force-app",
+            "default": true,
+            "package": "CustomLightningFieldLayouts",
+            "versionName": "Winter 2021",
+            "versionNumber": "1.0.0.NEXT"
+        }
+    ],
+    "namespace": "",
+    "sfdcLoginUrl": "https://login.salesforce.com",
+    "sourceApiVersion": "50.0",
+    "packageAliases": {
+        "CustomLightningFieldLayouts": "0Ho4T000000TN94SAG",
+        "CustomLightningFieldLayouts@1.0.0-1": "04t4T000001ZFe9QAG",
+        "CustomLightningFieldLayouts@1.0.0-2": "04t4T000001ZFeEQAW",
+        "CustomLightningFieldLayouts@1.0.0-3": "04t4T000001ZFeJQAW",
+        "CustomLightningFieldLayouts@1.0.0-4": "04t4T000001ZFeOQAW"
+    }
+}

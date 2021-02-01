@@ -1,0 +1,20 @@
+<template>
+  <lightning-card title={title} icon-name={icon}>
+    <div class="slds-m-around_medium">
+      <template if:true={fieldList.data}>
+        <lightning-record-form
+          record-id={rid}
+          object-api-name={objName}
+          fields={fields}
+          columns={columns}
+          mode={displayMode}
+          onsubmit={handleSubmit}
+        >
+        </lightning-record-form>
+      </template>
+      <template if:true={fieldList.error}>
+        <c-error-panel errors={fieldList.error}></c-error-panel>
+      </template>
+    </div>
+  </lightning-card>
+</template>

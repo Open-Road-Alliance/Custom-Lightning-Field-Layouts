@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>50.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Custom Layout for Record Details</masterLabel>
+    <description
+  >This component offers the ability to build out a custom layout for record details.</description>
+    <targets>
+      <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+      <targetConfig targets="lightning__RecordPage">
+          <property
+        required="true"
+        label="Object API Name"
+        name="object"
+        type="String"
+        datasource="apex://RelatedObjects"
+        description="The api name of the sObject, supports custom and standard objects. The list populates with the object type of the current record and with any object referenced via a lookup field on the current object."
+      />
+          <property
+        required="true"
+        label="Fieldset Name"
+        name="fieldSet"
+        type="String"
+        datasource="apex://FieldSets"
+        description="The api name of the fieldset corresponding to the selected object. Salesforce does not currently support dependent picklist fields on the visual editor, so make sure to select a field set corresponding to the above selected object."
+      />
+          <property
+        label="Card Icon Name"
+        name="icon"
+        type="String"
+        default="standard:opportunity"
+        description="The standard name of the icon to use. Full list available here: https://lightningdesignsystem.com/icons/"
+      />
+          <property
+        label="Card Title"
+        name="title"
+        type="String"
+        default="Record Details"
+        description="The title of the card, appears alongside the icon."
+      />
+          <property
+        label="Columns"
+        name="columns"
+        type="Integer"
+        default="2"
+        description="The number of columns to use in the layout grid. Use multiple instances of this component to create more complex layouts."
+      />
+          <property
+        label="Starting Mode"
+        name="mode"
+        type="String"
+        default="View"
+        datasource="View,Edit"
+        description="Specifies the default mode on page load."
+      />
+          <property
+        label="Read Only"
+        name="isReadOnly"
+        type="Boolean"
+        description="Specifices if the fields should be editable or not. If selected, overrides Starting Mode behavior."
+      />
+      </targetConfig>
+  </targetConfigs>
+</LightningComponentBundle>
